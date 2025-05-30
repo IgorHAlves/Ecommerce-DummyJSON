@@ -1,9 +1,14 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from './components/NavbarComponent.vue'
+import Footer from './components/FooterComponent.vue'
 </script>
 
 <template>
-  <Navbar />
-  <RouterView />
+  <div class="flex flex-col ">
+    <Navbar />
+        <RouterView />
+  </div>
+  
+  <Footer/>
 </template>
