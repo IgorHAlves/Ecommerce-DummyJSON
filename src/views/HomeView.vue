@@ -12,6 +12,18 @@
 </template>
 
 
-<!--<script setup>
+<script>
+  import axios from 'axios'
   import CardProduto from '../components/CardProdutoComponent.vue'
-</script>-->
+  import{ref, onMounted} from "vue"
+
+  const products = ref([])
+  const offset = ref (0)
+  const limit = 20
+
+  const fetch = async () => {
+    const response = await axios.get(`'https://dummyjson.com/products?offset${offset.value}&limit${limit.value}'`)
+    const results = response.data.products
+    console.log(products.value);  
+  } 
+</script>
