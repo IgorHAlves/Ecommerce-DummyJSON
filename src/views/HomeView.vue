@@ -1,8 +1,13 @@
 <template>
   <main class="min-h-screen flex flex-col justify-center p-4">
     <!--Banner-->
-
+    <div class="w-full h-[400px] bg-black ">
+      
+    </div>
   <!--Produtos-->
+    <div>
+      <h1 class="text-center items-center font-bold py-10 text-4xl ">Produtos</h1>
+    </div>
     <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 ">
         <CardProduto 
           v-for="product in products"
@@ -10,9 +15,9 @@
           :products="product"/>
     </div>
   <!--Botão-->
-    <div class="p-4 mt-5 bg-gray-100">
-      <button @click="prevPage"><</button>
-      <button @click="nextPage" class="text-white">></button>
+    <div class="flex justify-end items-center gap-4 p-4 mt-5">
+      <button class="bg-black text-white rounded-lg w-10" @click="prevPage"><</button>
+      <button @click="nextPage" class="bg-black rounded-lg text-white w-10">></button>
     </div>
     
   </main>
@@ -36,6 +41,8 @@
       products.value = results
 
       console.log(products.value);
+
+      
 
     } catch (error) {
       console.error("Erro ao buscar produtos:", error);
