@@ -7,8 +7,8 @@
 
         <!-- Barra de pesquisa -->
         <div class="flex items-center">
-            <input type="text" class="w-60 bg-white text-black h-10 rounded pl-2 focus:outline-none"
-                placeholder="Pesquise o produto" />
+            <input type="text" class=" w-120 bg-white text-black h-10 rounded pl-2 focus:outline-none"
+                placeholder="Pesquise o produto">
         </div>
 
         <!-- Navegação -->
@@ -18,7 +18,7 @@
             </router-link>
 
             <!-- Dropdown de categorias -->
-            <li class="relative" ref="dropdownRef">
+                <li class="relative" ref="dropdownRef">
                 <button @click="toggleDropdown" class="hover:underline hover:cursor-pointer flex items-center gap-1">
                     Categorias
                     <svg :class="{ 'rotate-180': showDropdown }" class="w-4 h-4 transition-transform duration-300"
@@ -35,6 +35,7 @@
                     </li>
                 </ul>
             </li>
+            
 
             <li class="hover:underline hover:cursor-pointer">Carrinho</li>
         </ul>
