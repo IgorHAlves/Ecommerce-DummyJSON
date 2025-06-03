@@ -1,25 +1,25 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ProductCategoryView from '../views/ProductCategoryView.vue'
-import ProductDetailView from '../views/ProductDetailView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import ProductCategoryView from "../views/ProductCategoryView.vue";
+import ProductDetailView from "../views/ProductDetailView.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "home",
       component: HomeView,
     },
     {
-      path: '/category/:url',
-      name: 'ProductCategoryView',
+      path: "/category/:slug",
+      name: "ProductCategoryView",
       component: ProductCategoryView,
     },
     {
-      path: '/product/:id',
-      name: 'product-detail',
+      path: "/product/:id",
+      name: "product-detail",
       component: ProductDetailView,
-    }
+    },
 
     // {
     //   path: '/about',
@@ -30,6 +30,6 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue'),
     // },
   ],
-})
+});
 
-export default router
+export default router;
