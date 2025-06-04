@@ -1,6 +1,8 @@
 <template>
+  <div class="fixed w-full">
+  <div class="bg-blue-50 text-center font-bold">Bem vindo ao dummyjson</div>
   <nav
-    class="bg-black text-white flex justify-between mt-5 h-15 px-10 py-4 relative"
+    class="bg-black text-white flex justify-between h-15 px-10 py-4"
   >
     <!-- Logo -->
     <router-link to="/">
@@ -66,6 +68,7 @@
       <li class="hover:underline hover:cursor-pointer">Carrinho</li>
     </ul>
   </nav>
+  </div>
 </template>
 
 <script setup>
