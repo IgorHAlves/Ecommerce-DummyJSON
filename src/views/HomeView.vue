@@ -9,7 +9,7 @@
       <div>
         <h1 class="text-center items-center font-bold py-10 text-4xl ">Produtos</h1>
       </div>
-      <div class="grid  gap-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 ">
+      <div class="grid gap-2 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 ">
         <CardProduto  v-for="product in products" :key="product.title" :products="product" />
       </div>
       

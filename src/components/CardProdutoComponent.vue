@@ -1,7 +1,7 @@
 <template>
   <router-link :to="`/product/${products.id}`" class="block">
     <div
-      class="bg-gray-50 border-2 border-black p-2 text-black hover:shadow-lg cursor-pointer w-92"
+      class="bg-gray-50 border-2 rounded-lg border-black p-2 text-black hover:shadow-lg cursor-pointer w-80"
     >
       <img
         class="flex justify-center w-full"
