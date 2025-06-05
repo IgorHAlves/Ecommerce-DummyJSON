@@ -15,7 +15,7 @@
         <h1 class="font-bold text-lg">Descrição:</h1>
         <p class="mt-2">{{ product.description }}</p>
         <p class="text-lg mt-4 font-bold">R$ {{ product.price }}</p>
-        <p class="text-lg mt-4 font-bold">R$ {{ product.dimensions.width }}</p>
+        <!-- <p class="text-lg mt-4 font-bold">R$ {{ product.dimensions.width }}</p> -->
         <button class="bg-black text-white p-4 w-50 mt-10">Adicionar ao carrinho</button>     
       </div>
     </div>

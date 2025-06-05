@@ -15,6 +15,8 @@
           type="text"
           class="w-120 bg-white text-black h-10 rounded pl-2 focus:outline-none"
           placeholder="Pesquise o produto"
+          @input="onInput" 
+          :value="searchStore.term"
         />
       </div>
 
@@ -73,7 +75,12 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 import { useRouter } from "vue-router";
+import { useSearchStore } from '../stores/SearchStore'
 
+const searchStore = useSearchStore()
+const onInput = (event) => {
+  searchStore.setTerm(event.target.value)
+}
 const showDropdown = ref(false);
 const categories = ref([]);
 const dropdownRef = ref(null);

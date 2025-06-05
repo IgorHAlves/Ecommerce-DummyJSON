@@ -27,23 +27,23 @@
 
 <script setup>
 import axios from 'axios'
-import { ref, onMounted } from "vue"
+import { ref, onMounted, watch } from "vue"
 import CardProduto from '../components/CardProdutoComponent.vue'
+import { useSearchStore } from '../stores/SearchStore'
 
+const searchStore = useSearchStore()
 const products = ref([])
 const skip = ref(0)
 const limit = 20
 
-const fetchProduct = async () => {
+const fetchProduct = async (search) => {
   try {
-    const response = await axios.get(`https://dummyjson.com/products?skip=${skip.value}&limit=${limit}`)
+    const response = await axios.get(`https://dummyjson.com/products/search?q=${search}&skip=${skip.value}&limit=${limit}`
+)
     const results = response.data.products;
     products.value = results
 
     console.log(products.value);
-
-
-
   } catch (error) {
     console.error("Erro ao buscar produtos:", error);
   }
@@ -51,15 +51,19 @@ const fetchProduct = async () => {
 
 const nextPage = () => {
   skip.value += limit
-  fetchProduct();
+  fetchProduct(searchStore.term);
 };
 
 const prevPage = () => {
   if (skip.value > 0) {
     skip.value -= limit
-    fetchProduct();
+    fetchProduct(searchStore.term);
   }
 };
 
-onMounted(fetchProduct);
+watch(() => searchStore.term, (newTerm) => {
+  fetchProduct(newTerm)
+})
+
+onMounted(() => fetchProduct(searchStore.term));
 </script>
