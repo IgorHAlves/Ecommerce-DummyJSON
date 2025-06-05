@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen flex flex-col justify-center p-4">
+  <main class="min-h-screen flex flex-col justify-center p-4 mt-30">
    <div class=" flex  flex-col items-center">
      <!--Banner-->
       <div class="w-full h-[400px] bg-black ">

@@ -1,6 +1,6 @@
 <template>
   <div class="fixed w-full">
-    <div class="bg-blue-50 text-center font-bold">Bem vindo ao dummyjson</div>
+    <div class="bg-white text-center font-bold">Bem vindo ao dummyjson</div>
     <nav class="bg-black text-white flex justify-between h-15 px-10 py-4">
       <!-- Logo -->
       <router-link to="/">
