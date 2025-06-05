@@ -7,7 +7,7 @@
         v-if="product.images && product.images.length" 
         :src="product.images[0]" 
         alt="Imagem Produto" 
-        class="bg-gray-100 flex w-[600px] h-[600px]"
+        class="bg-gray-100 flex w-[600px] h-[600px]  rounded-lg"
       />
       <div class="flex flex-col flex-justify text-left w-[700px] ml-6 ">
         <h1 class="text-2xl font-bold underline ">{{ product.title }}</h1>
@@ -23,10 +23,11 @@
             <p class="font-bold ">Altura:</p> <p class="px-1">{{ product.dimensions.height }} cm</p>
           </p>
 
-        <p class="text-lg mt-6 font-bold "><p class="bg-yellow-500 w-12 rounded-lg text-[14px]">{{ product.discountPercentage }}%</p>R$ {{ product.price }}</p>
-        
-         <p class="mt-3">Total disponivel:  {{ product.stock }} </p>
-        <button class="bg-black text-white p-4 w-50 mt-10 hover:underline hover:cursor-pointer">Adicionar ao carrinho</button>     
+        <p class="text-lg mt-6 font-bold "><p class="bg-green-500 text-green-900 w-20 text-center rounded-lg text-[14px]"> -{{ product.discountPercentage }}%</p>R$ {{ product.price }}</p>
+        <div class="flex">
+         <p class="mt-3 font-bold">Total disponivel:</p> <p class="mt-3 ml-2"> {{ product.stock }} </p>
+         </div>
+        <button class="bg-black text-white p-4 w-50 mt-10 hover:underline hover:cursor-pointer rounded-lg">Adicionar ao carrinho</button>     
       </div>
     </div>
     <div class="mt-20"> 
