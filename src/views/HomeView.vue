@@ -2,7 +2,9 @@
   <main class="min-h-screen flex flex-col justify-center p-4 mt-30">
    <div class=" flex  flex-col items-center">
      <!--Banner-->
-      <div class="w-full h-[400px] bg-black ">
+      <div class="w-full h-[400px] bg-black text-white text-center p-30">
+        <h1 class="text-5xl">Consumo Dummyjson API</h1>
+        <h1 class="text-4xl mt-10">Ecommerce</h1>
         <img src="" alt="">
       </div>
       <!--Produtos-->
