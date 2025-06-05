@@ -1,16 +1,20 @@
-<template>
+<template class="p-4">
   <!--Produtos-->
-  <div>
-    <h1 class="text-center items-center font-bold py-10 text-4xl">
-      {{ category }}
-    </h1>
-  </div>
-  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
-    <CardProduto
-      v-for="product in products"
-      :key="product.title"
-      :products="product"
-    />
+  <div class="flex flex-col items-center">
+    <div>
+      <h1 class="text-center items-center font-bold py-10 text-4xl">
+        {{
+          String(category).charAt(0).toUpperCase() + String(category).slice(1)
+        }}
+      </h1>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
+      <CardProduto
+        v-for="product in products"
+        :key="product.title"
+        :products="product"
+      />
+    </div>
   </div>
 </template>
 
@@ -41,6 +45,7 @@ watch(
   (newSlug) => {
     category.value = newSlug;
     fetchProduct();
+    console.log(category.value);
   }
 );
 
