@@ -2,6 +2,7 @@
 Ecommerce DummyJSON
 
 Rafael Pereira dos Santos, RA: 2012379 - 3ºA - ADS 
+
 Igor Henrique Alves, RA: 2011575 - 3ºA - ADS
 
 Este projeto é um e-commerce criado com **Vue 3**, **Pinia**, **Vue Router** e **Tailwind CSS**, consumindo a API pública do [DummyJSON](https://dummyjson.com/).
